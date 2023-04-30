@@ -1,0 +1,156 @@
+header{
+    grid-area: header;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../imgs-videos/Background.png);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* background-size: 100%; */
+}
+.menu-search-responsive{
+    display: none;
+    
+}
+.menu-search{
+    display: flex;
+    gap: 90px;
+    font-size: 1.4rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-social{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-right: 63px;
+    padding-left: 20px;
+}
+
+#img-youtube{
+    height: 50px;
+}
+
+#img-linkedin{
+    height: 40px;
+}
+
+#logo{
+    display: flex;
+    padding-left: 15px;
+    height: 63px;
+}
+
+@media(max-width: 1000px){
+    .menu-search{
+        display: flex;
+        gap: 50px;
+        font-size: 1.3rem;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .menu-social{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-left: 10px;
+    }
+
+    #img-youtube{
+        height: 43px;
+    }
+    
+    #img-linkedin{
+        height: 33px;
+    }
+
+    #logo{
+        display: flex;
+        padding-left: 15px;
+        height: 63px;
+    }
+
+}
+
+@media(max-width: 900px){
+    .menu-search{
+        display: flex;
+        gap: 40px;
+        font-size: 1.2rem;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .menu-social{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-left: 10px;
+        padding-right: 23px;
+    }
+
+    #img-youtube{
+        height: 43px;
+    }
+    
+    #img-linkedin{
+        height: 33px;
+    }
+
+    #logo{
+        display: flex;
+        padding-left: 15px;
+        height: 60px;
+    }
+
+}
+
+@media(max-width: 800px){
+    .menu-search{
+        display: flex;
+        gap: 33px;
+        font-size: 1rem;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .menu-social{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-left: 10px;
+        padding-right: 23px;
+    }
+
+    #img-youtube{
+        height: 29px;
+    }
+    
+    #img-linkedin{
+        height: 23px;
+    }
+
+    #logo{
+        display: flex;
+        padding-left: 15px;
+        height: 56px;
+    }
+}
+
+@media(max-width: 640px){
+    .menu-search{
+        display: none;
+    }
+
+    .menu-search-responsive{
+        display: flex;
+        background-image: url(../imgs/Background.png);
+        color: white;
+        background-color: black;
+        border-color: lightseagreen;
+    }
+
+}
