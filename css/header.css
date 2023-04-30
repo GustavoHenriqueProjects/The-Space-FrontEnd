@@ -146,10 +146,13 @@ header{
     }
 
     .menu-search-responsive{
+        width: 160px;
         display: flex;
+        gap: 20px;
+        height: auto;
+        overflow: auto;
         background-image: url(../imgs/Background.png);
-        color: white;
-        background-color: black;
+        color: rgb(255, 255, 255);
         border-color: lightseagreen;
     }
 

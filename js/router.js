@@ -12,8 +12,6 @@ const routes = {
     '/astronaut' : '../pages/astronaut.html'
 }
 
-let currentPath = '/'
-
 /**
  * const route = async () => { ... }: define uma função "route()" 
  * que é chamada quando um link é clicado. É uma função assíncrona,
@@ -48,7 +46,6 @@ const route = async () =>{
      * Neste caso, se o caminho for "/", irá retornar "../pages/home.html"
      */
     const route = routes[path]
-    console.log("o route"+route)
 
     /**
      * const response = await fetch(route): faz uma requisição HTTP para obter
