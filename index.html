@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home-main.css">
     <link rel="stylesheet" href="./css/header.css">
     <script src="./js/app.js" type="module" defer></script>
     <title>The Space</title>
@@ -15,7 +16,7 @@
         <img src="./imgs-videos/Logo.png" id="logo" alt="Logo">
         <nav class="menu-search">
             <a href="/" onclick="route()">Home</a>
-            <a href="/astronautas" onclick="route()">Astronautas</a>
+            <a href="/astronaut" onclick="route()">Astronautas</a>
             <a href="/agencias" onclick="route()">Agências</a>
             <a href="/localizacoes" onclick="route()">Localizações</a>
         </nav>
@@ -30,7 +31,12 @@
             <img src="./imgs-videos/linkedin.png" id="img-linkedin" alt="Linkedin">
         </div>
     </header>
-    <main id="root"></main>
+    <main id="root">
+        <div class="home-main">
+            <video autoplay muted loop id="video-background" src="../imgs-videos/background-video.mp4"></video>
+            <div class="content">fernanda</div>
+        </div>
+    </main>
     <footer>Paulo</footer>
 </body>
 </html>

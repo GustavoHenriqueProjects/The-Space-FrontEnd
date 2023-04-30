@@ -10,19 +10,9 @@ body{
     grid-template-rows: 10% 1fr 10%;
 }
 
-#video-background{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 #root{
     grid-area: main;
     overflow: hidden;
-}
-
-.home-main{
-    height: 100%;
 }
 
 footer{
@@ -30,4 +20,16 @@ footer{
     width: 100%;
     background-image: url('../imgs-videos/Background.png');
     background-position: center;
+}
+
+.home-astronaut{
+    height: 100%;
+    background-color: lightblue;
+}
+
+@media(max-width:700){
+    #root{
+        grid-area: main;
+        height: auto;
+    }
 }
