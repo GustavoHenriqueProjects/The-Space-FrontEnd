@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home-main.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/home-astronautas.css">
+    <script src="./js/cards.js"></script>
     <script src="./js/app.js" type="module" defer></script>
     <title>The Space</title>
 </head>
+
 <body>
     <header>
         <img src="./imgs-videos/Logo.png" id="logo" alt="Logo">
@@ -21,26 +25,28 @@
             <a href="/location" onclick="route()">Localizações</a>
         </nav>
         <nav class="menu-search-responsive">
-                <a href="/" onclick="route()">Home</a>
-                <a href="/astronaut" onclick="route()">Astronautas</a>
-                <a href="/agencies" onclick="route()">Agências</a>
-                <a href="/location" onclick="route()">Localizações</a>
+            <a href="/" onclick="route()">Home</a>
+            <a href="/astronaut" onclick="route()">Astronautas</a>
+            <a href="/agencies" onclick="route()">Agências</a>
+            <a href="/location" onclick="route()">Localizações</a>
         </nav>
         <div class="menu-social">
             <a href="https://www.youtube.com/"><img src="./imgs-videos/youtube.png" id="img-youtube" alt="Youtube"></a>
-            <a href="https://www.linkedin.com/in/gustavo-h-296728210"><img src="./imgs-videos/linkedin.png" id="img-linkedin" alt="Linkedin"></a>
+            <a href="https://www.linkedin.com/in/gustavo-h-296728210"><img src="./imgs-videos/linkedin.png"
+                    id="img-linkedin" alt="Linkedin"></a>
         </div>
     </header>
     <main id="root">
         <div class="home-main">
             <video autoplay muted loop id="video-background" src="../imgs-videos/background-video.mp4"></video>
-                <a href="https://www.nasa.gov/">
-                    <div class="card-button">
-                        Descubra mais
-                    </div>
-                </a>
+            <a href="https://www.nasa.gov/">
+                <div class="card-button">
+                    Descubra mais
+                </div>
+            </a>
         </div>
     </main>
     <footer>2023 Copyright - The Space</footer>
 </body>
+
 </html>

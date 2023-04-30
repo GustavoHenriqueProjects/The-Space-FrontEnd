@@ -22,19 +22,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.2rem;
     background-image: url('../imgs-videos/Background.png');
     background-position: center;
-}
-
-
-
-
-
-.home-astronaut{
-    height: 100%;
-    background-color: lightblue;
 }
 
 .home-agencies{

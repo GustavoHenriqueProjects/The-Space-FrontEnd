@@ -65,6 +65,7 @@ const route = async () =>{
      *  define o conteúdo da tag HTML com o ID "root" como o
      *  conteúdo HTML obtido da requisição */
     document.getElementById('root').innerHTML = html
+
 }
 
 //Torna a função global para ser usada no html 
