@@ -9,7 +9,9 @@
  */
 const routes = {
     '/' : '../pages/home.html',
-    '/astronaut' : '../pages/astronaut.html'
+    '/astronaut' : '../pages/astronaut.html',
+    '/agencies' : '../pages/agencies.html',
+    '/location' : '../pages/location.html'
 }
 
 /**
