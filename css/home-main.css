@@ -1,6 +1,9 @@
 .home-main{
     position: relative; /*Ocupa todo o espaço que esta inserido no html*/
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #video-background{
@@ -13,7 +16,25 @@
     z-index: -1;/*Garante que o video fique de fundo*/
 }
 
-.content{
-    position: relative;
-    color: wheat;
+.card-button{
+    width: 320px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background: linear-gradient(180.91deg, #4A85BC 0.51%, rgba(74, 133, 188, 0.585029) 26.85%, rgba(74, 133, 188, 0.340032) 54.8%, rgba(74, 133, 188, 0) 100.51%);
+    color: white;
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+@media(max-width:600px){
+    .card-button{
+        width: 250px;
+        height: 100px;
+        font-size: 1.6rem;
+    }
 }
