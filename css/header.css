@@ -153,7 +153,17 @@ header{
         overflow: auto;
         background-image: url(../imgs/Background.png);
         color: rgb(255, 255, 255);
-        border-color: lightseagreen;
+    }
+
+    .menu-search-responsive a{
+        position: relative;
+        animation-name: animation;
+        animation-duration: 3s;
+    }
+
+    @keyframes animation{
+        0%{right: 0px;}
+        100%{right: 200px;}
     }
 
 }
