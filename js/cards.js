@@ -10,11 +10,12 @@ class card extends HTMLElement{
         this.name = 'Astronauta'
         this.photo = null
         this.background = 'green'
+        this.age_current = '00'
 
     }
 
     static get observedAttributes(){
-        return['name','photo', 'background']
+        return['name','photo', 'background','age_current']
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue){
@@ -36,12 +37,13 @@ class card extends HTMLElement{
           }
 
           .card{
-            width: 130px;
-            height: 200px;
+            width: 190px;
+            height: 300px;
             display: grid;
             grid-template-rows: 20% 1fr 20%;
             place-items: center;
             background-color: ${this.background};
+            border-radius: 30px;
           }
 
           .card_name{
@@ -60,6 +62,9 @@ class card extends HTMLElement{
           }
 
           .card-data{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             color: #fff;
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
@@ -80,9 +85,14 @@ class card extends HTMLElement{
         const photo = document.createElement('div')
         photo.classList.add('card-photo')
 
+        const age_current = document.createElement('p')
+        age_current.classList.add('data-age')
+        age_current.textContent = `Idade: ${this.age_current}`
+
         const data = document.createElement('div')
         data.classList.add('card-data')
-        data.textContent = 'Astronaut'
+
+        data.append(age_current)
 
         card.append(name, photo, data)
 

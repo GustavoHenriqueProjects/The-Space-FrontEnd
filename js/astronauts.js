@@ -8,6 +8,12 @@ const createCards = ($data) =>{
     card.setAttribute('name', $data.name)
     card.setAttribute('photo', $data.profile_image_thumbnail)
     card.setAttribute('background', 'blue')
+    card.setAttribute('age_current', $data.age)
+
+    const statusAstronauts = document.querySelector('#option')
+    statusAstronauts.addEventListener('change', () =>{
+    console.log('Fernanda')
+})
 
     return card
 }
@@ -23,3 +29,5 @@ const createCards = ($data) =>{
     card.replaceChildren(...listAstronauts)
 
 }
+
+
