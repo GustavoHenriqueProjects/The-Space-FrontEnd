@@ -1,5 +1,6 @@
 'use strict'
 
+import {loadAllAstronauts} from './astronauts.js'
 /**
  * const routes = { '/': '../pages/home.html' }: 
  * define um objeto "routes" que mapeia os caminhos das rotas
@@ -65,6 +66,10 @@ const route = async () =>{
      *  define o conteúdo da tag HTML com o ID "root" como o
      *  conteúdo HTML obtido da requisição */
     document.getElementById('root').innerHTML = html
+
+    if(path == '/astronaut'){
+        loadAllAstronauts()
+    }
 
 }
 
