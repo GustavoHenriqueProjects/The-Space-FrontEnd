@@ -42,7 +42,7 @@ class card extends HTMLElement{
             display: grid;
             grid-template-rows: 20% 1fr 20%;
             place-items: center;
-            background-color: ${this.background};
+            background: ${this.background};
             border-radius: 30px;
           }
 
