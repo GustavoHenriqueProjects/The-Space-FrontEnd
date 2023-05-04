@@ -1,10 +1,10 @@
 'use strict'
 
 //async permite que execute o restante do codigo, como a obetenção da API sem bloquear a execucao do restante do codigo
-export const getAgencies = async() =>{
+export const getAstronautsByPage = async(page) =>{
 
     //URL indica o endereço onde as informações podem ser obtidas
-    const url = 'https://ll.thespacedevs.com/2.2.0/agencies/?limit=122'
+    const url = `${page}`
 
     //Para acessar os dados da requisição da API é nessario o feth() que tem os status da requisição e os headers
     const response = await fetch(url)

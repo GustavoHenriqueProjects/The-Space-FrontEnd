@@ -9,7 +9,7 @@ class card extends HTMLElement{
 
         this.name = 'Astronauta'
         this.photo = null
-        this.background = 'green'
+        this.background = ''
         this.data = '00'
       }
 

@@ -1,6 +1,7 @@
 'use strict'
 
-import {getAllAgencies} from './endPoints/card_agencies.js'
+import {getAgencies} from './endPoints/card_agencies.js'
+import {getAgenciesByName} from './endPoints/card_agenciesByName.js'
 
 const createCards = ($data) => {
 
@@ -10,7 +11,7 @@ const createCards = ($data) => {
     card.setAttribute('background', 'linear-gradient(179.15deg, #4A85BC -0.22%, rgba(74, 133, 188, 0.585029) -0.22%, rgba(74, 133, 188, 0.340032) 2.21%, rgba(74, 133, 188, 0.22032) 78.07%, rgba(74, 133, 188, 0) 106.08%)');
     card.setAttribute('data', $data.type)
 
-    if($data.image_url == undefined) {
+    if($data.image_url == undefined || $data.image_url == '') {
         card.setAttribute('photo', $data.logo_url)
     }else{
         card.setAttribute('photo', '../imgs-videos/erro.png')
@@ -19,16 +20,32 @@ const createCards = ($data) => {
     return card
 }
 
+const searchAgenciesByName = async (name) => {
 
-export const loadAllAgencies = async () => {
-
-    let allAstronauts = await getAllAgencies()
+    let searchAgencie = await getAgenciesByName(name)
 
     let card = document.querySelector('.container-card')
 
-    let listAstronauts = allAstronauts.results.map(createCards)
+    let cardAgencie = searchAgencie.results.map(createCards)
+
+    card.replaceChildren(...cardAgencie)
+    
+}
+
+
+export const loadAllAgencies = async () => {
+
+    let agencies = await getAgencies()
+
+    let card = document.querySelector('.container-card')
+
+    let listAstronauts = agencies.results.map(createCards)
 
     card.replaceChildren(...listAstronauts)
 
+    const search = document.getElementById('search')
+    search.addEventListener('keyup', () =>{
+        searchAgenciesByName(search.value)
+    })
 
 }

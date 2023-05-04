@@ -7,3 +7,11 @@
     outline: 0;
     padding: 3px;
 }
+
+.filter{
+    width: 280px;
+    gap: 10px;
+    display: flex;
+    color: white;
+    padding-left: 10px;
+}

@@ -16,19 +16,38 @@
     z-index: -1;/*Garante que o video fique de fundo*/
 }
 
-
-.filter{
+.filter-option-page{
     width: 100%;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
     gap: 10px;
     font-size: 1rem;
     color: white;
     font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+}
+
+.filter_option{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons{
+    display: flex;
+    gap: 9px;
+    padding-right: 63px;
+}
+
+img{
+    height: 30px;
+}
+
+#next-page{
+    transform: rotate(180deg)
 }
 
 .container-card{
@@ -40,4 +59,10 @@
     justify-content: center;
     gap: 30px;
     padding: 20px;
+}
+
+@media(max-width: 400px){
+    .buttons{
+        padding-right: 20px;
+    }
 }
