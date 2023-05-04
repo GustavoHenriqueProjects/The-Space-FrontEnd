@@ -9,7 +9,7 @@ const createCards = ($data) =>{
     card.setAttribute('name', $data.name)
     card.setAttribute('photo', $data.profile_image_thumbnail)
     card.setAttribute('background', 'linear-gradient(179.15deg, #4A85BC -0.22%, rgba(74, 133, 188, 0.585029) -0.22%, rgba(74, 133, 188, 0.340032) 2.21%, rgba(74, 133, 188, 0.22032) 78.07%, rgba(74, 133, 188, 0) 106.08%)');
-    card.setAttribute('age_current', $data.age)
+    card.setAttribute('data', `Idade: ${$data.age}`)
 
     return card
 }
@@ -45,6 +45,7 @@ const statusAstronauts = async (status) =>{
     const option = document.querySelector('#option')
     option.addEventListener('change', () => {
     statusAstronauts(option.value)
+
 })
 
 }

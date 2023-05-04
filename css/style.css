@@ -28,17 +28,10 @@ footer{
     background-position: center;
 }
 
-.home-agencies{
-    height: 100%;
-    background-color: lightgoldenrodyellow;
-}
-
 .home-location{
     height: 100%;
     background-color: lightgreen;
 }
-
-
 
 @media(max-width:700){
     #root{

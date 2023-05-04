@@ -1,6 +1,7 @@
 'use strict'
 
 import {loadAllAstronauts} from './astronauts.js'
+import {loadAllAgencies} from './agencies.js'
 /**
  * const routes = { '/': '../pages/home.html' }: 
  * define um objeto "routes" que mapeia os caminhos das rotas
@@ -69,8 +70,9 @@ const route = async () =>{
 
     if(path == '/astronaut'){
         loadAllAstronauts()
+    }else if(path == '/agencies'){
+        loadAllAgencies()
     }
-
 }
 
 //Torna a função global para ser usada no html 

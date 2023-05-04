@@ -10,12 +10,11 @@ class card extends HTMLElement{
         this.name = 'Astronauta'
         this.photo = null
         this.background = 'green'
-        this.age_current = '00'
-
-    }
+        this.data = '00'
+      }
 
     static get observedAttributes(){
-        return['name','photo', 'background','age_current']
+        return['name','photo', 'background','data']
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue){
@@ -87,7 +86,7 @@ class card extends HTMLElement{
 
         const age_current = document.createElement('p')
         age_current.classList.add('data-age')
-        age_current.textContent = `Idade: ${this.age_current}`
+        age_current.textContent = `${this.data}`
 
         const data = document.createElement('div')
         data.classList.add('card-data')
