@@ -4,8 +4,6 @@ import { getExpedition } from './endPoints/card_expedition.js'
 import { getExpeditionByPage } from './endPoints/card_expeditionByPage.js'
 const createCards = ($data) => {
 
-    console.log($data)
-
     const card = document.createElement('card-astronaut')
     card.setAttribute('name', $data.name)
     card.setAttribute('background', 'linear-gradient(179.15deg, #4A85BC -0.22%, rgba(74, 133, 188, 0.585029) -0.22%, rgba(74, 133, 188, 0.340032) 2.21%, rgba(74, 133, 188, 0.22032) 78.07%, rgba(74, 133, 188, 0) 106.08%)');
@@ -23,7 +21,7 @@ const nextPage = async () => {
 
     let card = document.querySelector('.container-card')
 
-    let page = await getExpedition(newPage)
+    let page = await getExpeditionByPage(newPage)
 
     let listAstronauts = page.results.map(createCards)
 
