@@ -2,6 +2,7 @@
 
 import {loadAllAstronauts} from './astronauts.js'
 import {loadAllAgencies} from './agencies.js'
+import {loadAllExpedition} from './expedition.js'
 /**
  * const routes = { '/': '../pages/home.html' }: 
  * define um objeto "routes" que mapeia os caminhos das rotas
@@ -13,7 +14,7 @@ const routes = {
     '/' : '../pages/home.html',
     '/astronaut' : '../pages/astronaut.html',
     '/agencies' : '../pages/agencies.html',
-    '/location' : '../pages/location.html'
+    '/expedition' : '../pages/expedition.html'
 }
 
 /**
@@ -72,6 +73,8 @@ const route = async () =>{
         loadAllAstronauts()
     }else if(path == '/agencies'){
         loadAllAgencies()
+    }else if(path == '/expedition'){
+        loadAllExpedition()
     }
 }
 
