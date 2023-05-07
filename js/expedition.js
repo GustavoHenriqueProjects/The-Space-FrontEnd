@@ -2,6 +2,7 @@
 
 import { getExpedition } from './endPoints/card_expedition.js'
 import { getExpeditionByPage } from './endPoints/card_expeditionByPage.js'
+
 const createCards = ($data) => {
 
     const card = document.createElement('card-astronaut')
@@ -23,9 +24,9 @@ const nextPage = async () => {
 
     let page = await getExpeditionByPage(newPage)
 
-    let listAstronauts = page.results.map(createCards)
+    let listExpedition = page.results.map(createCards)
 
-    card.replaceChildren(...listAstronauts)
+    card.replaceChildren(...listExpedition)
 
     //Atualiza o valor do localStorage com a nova pagina
     localStorage.removeItem('nextPageExpedition')
@@ -45,9 +46,9 @@ const previousPage = async () => {
 
         let nextPage = await getExpeditionByPage(backPage)
 
-        let listAstronauts = nextPage.results.map(createCards)
+        let listExpedition = nextPage.results.map(createCards)
 
-        card.replaceChildren(...listAstronauts)
+        card.replaceChildren(...listExpedition)
 
         //Atualiza o valor do localStorage com a nova pagina
         localStorage.removeItem('nextPageExpedition')
@@ -59,36 +60,18 @@ const previousPage = async () => {
     }
 }
 
-const searchAgenciesByName = async (name) => {
-
-    let searchAgencie = await getAgenciesByName(name)
-
-    let card = document.querySelector('.container-card')
-
-    let cardAgencie = searchAgencie.results.map(createCards)
-
-    card.replaceChildren(...cardAgencie)
-
-}
-
-
 export const loadAllExpedition = async () => {
 
     let expedition = await getExpedition()
 
     let card = document.querySelector('.container-card')
 
-    let listAstronauts = expedition.results.map(createCards)
+    let listExpedition = expedition.results.map(createCards)
 
     localStorage.setItem('nextPageExpedition', expedition.next)
     localStorage.removeItem('backPageExpedition')
 
-    card.replaceChildren(...listAstronauts)
-
-    const search = document.getElementById('search')
-    search.addEventListener('keyup', () => {
-        searchAgenciesByName(search.value)
-    })
+    card.replaceChildren(...listExpedition)
 
     let new_page = window.document.getElementById('next-page')
     new_page.addEventListener('click', () => {
