@@ -4,7 +4,7 @@
 export const getAgencies = async() =>{
 
     //URL indica o endereço onde as informações podem ser obtidas
-    const url = 'https://ll.thespacedevs.com/2.2.0/agencies/?limit=122'
+    const url = 'https://ll.thespacedevs.com/2.2.0/agencies/?limit=10'
 
     //Para acessar os dados da requisição da API é nessario o feth() que tem os status da requisição e os headers
     const response = await fetch(url)

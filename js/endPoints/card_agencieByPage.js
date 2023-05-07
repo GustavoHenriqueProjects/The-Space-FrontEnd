@@ -1,9 +1,9 @@
 'use strict'
 
 //async permite que execute o restante do codigo, como a obetenção da API sem bloquear a execucao do restante do codigo
-export const getAstronautsByPage = async (page) => {
+export const getAgenciesByPage = async (page) => {
 
-    if (page != null && page != 'null' && page !== undefined && page != 'undefined') {
+    if (page !== null && page !== undefined && page != 'null' && page !== 'undefined') {
         //URL indica o endereço onde as informações podem ser obtidas
         const url = `${page}`
 
@@ -17,4 +17,5 @@ export const getAstronautsByPage = async (page) => {
             ...data
         }
     }
+
 }

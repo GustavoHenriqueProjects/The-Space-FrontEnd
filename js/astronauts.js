@@ -47,6 +47,7 @@ const previousPage = async () => {
 
     card.replaceChildren(...listAstronauts)
 
+
     //Atualiza o valor do localStorage com a nova pagina
     localStorage.removeItem('nextPage')
     localStorage.removeItem('backPage')
@@ -120,9 +121,3 @@ export const loadAllAstronauts = async () => {
     })
 
 }
-
-
-
-
-
-
