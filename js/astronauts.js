@@ -102,8 +102,8 @@ export const loadAllAstronauts = async () => {
 
     card.replaceChildren(...listAstronauts)
 
-    let next_page = allAstronauts.results.next_page
-    console.log(next_page)
+    //let next_page = allAstronauts.results.next_page
+    //console.log(next_page)
 
     const option = document.querySelector('#option')
     option.addEventListener('change', () => {
